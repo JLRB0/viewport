@@ -411,7 +411,7 @@ header p::after {
 
 }
 
-@media (hover: hover) {
+@media (any-pointer: fine) {
     header p::after {
 
         content: "This device supports the hover feature!";
