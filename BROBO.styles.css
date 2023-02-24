@@ -403,7 +403,7 @@ img{
 
 header p::after {
     display: inline-block;
-    content: "This device does NOT support the 'initial-letter' property!";
+    content: "This browser does NOT support the 'initial-letter' property!";
     background-color: var(--red);
     color: var(--white);
     padding: 10px;
@@ -425,7 +425,7 @@ header p::after {
     }
 
     header p::after {
-        content: "This device supports the 'initial-letter' property!";
+        content: "This browser supports the 'initial-letter' property!";
         display: block;
         width: 50%;
         text-align: center;
