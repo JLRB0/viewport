@@ -403,7 +403,7 @@ img{
 
 header p::after {
     display: inline-block;
-    content: "This device has an aspect ratio greater than 16:9!";
+    content: "This device does NOT support the 'initial-letter' property!";
     background-color: var(--red);
     color: var(--white);
     padding: 10px;
@@ -411,12 +411,28 @@ header p::after {
 
 }
 
-@media (max-aspect-ratio: 16/9) {
-    header p::after {
+@supports (initial-letter: 3) {
+    header p::first-letter {
+        initial-letter: 3 2;
+        font-weight: bold;
+        font-style: italic;
+    }
 
-        content: "This device has an aspect ratio less than or equal to 16:9!";
+    header p {
+        display: block;
+        max-width: 100ch;
 
     }
+
+    header p::after {
+        content: "This device supports the 'initial-letter' property!";
+        display: block;
+        width: 50%;
+        text-align: center;
+        margin-left: 130px;
+    }
+
+  
   }
 
 /* --------------- END FEATURE QUERY --------------- */
